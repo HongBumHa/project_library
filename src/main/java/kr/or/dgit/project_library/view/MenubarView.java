@@ -20,6 +20,8 @@ import javax.swing.border.LineBorder;
 
 import org.apache.ibatis.annotations.Case;
 
+import kr.or.dgit.project_library.ui.UserUi;
+
 public class MenubarView extends JPanel {
 	private JLabel lblChartBorder;
 	private JLabel lblUserinfoBorder;
@@ -31,10 +33,10 @@ public class MenubarView extends JPanel {
 	private JLabel lblChart;
 
 	
-	public MenubarView() {
+	public MenubarView(String name1, String name2,String name3,String name4) {
 		setLayout(null);
 		
-		lblBookRental = new JLabel("도서 대여");
+		lblBookRental = new JLabel(name1);
 		lblBookRental.setIcon(null);
 		lblBookRental.setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 14));
 		lblBookRental.setForeground(Color.BLACK);
@@ -45,20 +47,20 @@ public class MenubarView extends JPanel {
 				mouseClick(1);
 			}
 		});
-		lblBookRental.setBounds(48, 131, 81, 44);
+		lblBookRental.setBounds(48, 47, 81, 44);
 		add(lblBookRental);
 		
 		JLabel lblBookRental1 = new JLabel("");
 		lblBookRental1.setBorder(new LineBorder(new Color(230, 230, 250), 5));
-		lblBookRental1.setBounds(34, 136, 10, 32);
+		lblBookRental1.setBounds(34, 52, 10, 32);
 		add(lblBookRental1);
 		
 		lblBookRentalBorder = new JLabel("");
 		lblBookRentalBorder.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		lblBookRentalBorder.setBounds(48, 164, 81, 3);
+		lblBookRentalBorder.setBounds(48, 80, 81, 3);
 		add(lblBookRentalBorder);
 		
-		lblBookReturn = new JLabel("도서 반납");
+		lblBookReturn = new JLabel(name2);
 		lblBookReturn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -68,22 +70,22 @@ public class MenubarView extends JPanel {
 		lblBookReturn.setForeground(Color.GRAY);
 		lblBookReturn.setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 14));
 		lblBookReturn.setBackground(Color.WHITE);
-		lblBookReturn.setBounds(48, 185, 81, 44);
+		lblBookReturn.setBounds(48, 101, 81, 44);
 		add(lblBookReturn);
 		
 		JLabel lblBookReturn1 = new JLabel("");
 		lblBookReturn1.setEnabled(false);
 		lblBookReturn1.setBorder(new LineBorder(new Color(230, 230, 250), 5));
-		lblBookReturn1.setBounds(34, 190, 10, 32);
+		lblBookReturn1.setBounds(34, 106, 10, 32);
 		add(lblBookReturn1);
 		
 		lblBookReturnBorder = new JLabel("");
 		lblBookReturnBorder.setEnabled(false);
 		lblBookReturnBorder.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		lblBookReturnBorder.setBounds(48, 218, 81, 3);
+		lblBookReturnBorder.setBounds(48, 134, 81, 3);
 		add(lblBookReturnBorder);
 		
-		lblUserinfo = new JLabel("개인 정보");
+		lblUserinfo = new JLabel(name3);
 		lblUserinfo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -93,21 +95,21 @@ public class MenubarView extends JPanel {
 		lblUserinfo.setForeground(Color.GRAY);
 		lblUserinfo.setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 14));
 		lblUserinfo.setBackground(Color.WHITE);
-		lblUserinfo.setBounds(48, 245, 81, 44);
+		lblUserinfo.setBounds(48, 161, 81, 44);
 		add(lblUserinfo);
 		
 		JLabel lblUserinfo1 = new JLabel("");
 		lblUserinfo1.setBorder(new LineBorder(new Color(230, 230, 250), 5));
-		lblUserinfo1.setBounds(34, 250, 10, 32);
+		lblUserinfo1.setBounds(34, 166, 10, 32);
 		add(lblUserinfo1);
 		
 		lblUserinfoBorder = new JLabel("");
 		lblUserinfoBorder.setEnabled(false);
 		lblUserinfoBorder.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		lblUserinfoBorder.setBounds(48, 278, 81, 3);
+		lblUserinfoBorder.setBounds(48, 194, 81, 3);
 		add(lblUserinfoBorder);
 		
-		lblChart = new JLabel("현황 보기");
+		lblChart = new JLabel(name4);
 		lblChart.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -117,17 +119,17 @@ public class MenubarView extends JPanel {
 		lblChart.setForeground(Color.GRAY);
 		lblChart.setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 14));
 		lblChart.setBackground(Color.WHITE);
-		lblChart.setBounds(48, 299, 81, 44);
+		lblChart.setBounds(48, 215, 81, 44);
 		add(lblChart);
 		
 		JLabel lblChart1 = new JLabel("");
 		lblChart1.setBorder(new LineBorder(new Color(230, 230, 250), 5));
-		lblChart1.setBounds(34, 304, 10, 32);
+		lblChart1.setBounds(34, 220, 10, 32);
 		add(lblChart1);
 		
 		lblChartBorder = new JLabel("");
 		lblChartBorder.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		lblChartBorder.setBounds(48, 332, 81, 3);
+		lblChartBorder.setBounds(48, 248, 81, 3);
 		add(lblChartBorder);
 		
 		JLabel menuBarBgIcon = new JLabel("");
@@ -142,6 +144,7 @@ public class MenubarView extends JPanel {
 		switch (i) {
 		case 1:
 			selectItem(lblBookRental);
+			
 			break;
 		case 2:
 			selectItem(lblBookReturn);
@@ -166,44 +169,19 @@ public class MenubarView extends JPanel {
 		lblChart.setForeground(Color.GRAY);
 		
 		if(j.getText().equals("도서 대여")) {
-			lblBookRentalBorder.setVisible(true);
-			lblBookReturnBorder.setVisible(false);
-			lblUserinfoBorder.setVisible(false);
-			lblChartBorder.setVisible(false);
-			lblBookRental.setForeground(Color.BLACK);
-			lblBookReturn.setForeground(Color.GRAY);
-			lblUserinfo.setForeground(Color.GRAY);
-			lblChart.setForeground(Color.GRAY);
+			chageMenu(lblBookRentalBorder,lblBookRental,new RentalBookView());
 		}else if(j.getText().equals("도서 반납")) {
-			lblBookRentalBorder.setVisible(false);
-			lblBookReturnBorder.setVisible(true);
-			lblUserinfoBorder.setVisible(false);
-			lblChartBorder.setVisible(false);
-			lblBookRental.setForeground(Color.GRAY);
-			lblBookReturn.setForeground(Color.BLACK);
-			lblUserinfo.setForeground(Color.GRAY);
-			lblChart.setForeground(Color.GRAY);
+			chageMenu(lblBookReturnBorder,lblBookReturn,new ReturnBookView());
 		}else if(j.getText().equals("개인 정보")) {
-			lblBookRentalBorder.setVisible(false);
-			lblBookReturnBorder.setVisible(false);
-			lblUserinfoBorder.setVisible(true);
-			lblChartBorder.setVisible(false);
-			lblBookRental.setForeground(Color.GRAY);
-			lblBookReturn.setForeground(Color.GRAY);
-			lblUserinfo.setForeground(Color.BLACK);
-			lblChart.setForeground(Color.GRAY);
+			chageMenu(lblUserinfoBorder,lblUserinfo,new UserinfoView());
 		}else if(j.getText().equals("현황 보기")) {
-			lblBookRentalBorder.setVisible(false);
-			lblBookReturnBorder.setVisible(false);
-			lblUserinfoBorder.setVisible(false);
-			lblChartBorder.setVisible(true);
-			lblBookRental.setForeground(Color.GRAY);
-			lblBookReturn.setForeground(Color.GRAY);
-			lblUserinfo.setForeground(Color.GRAY);
-			lblChart.setForeground(Color.BLACK);
+			chageMenu(lblChartBorder,lblChart,new UserChartView());
 		}
-		
-		
-		
+	}
+
+	private void chageMenu(JLabel jV, JLabel jC, JPanel jP) {
+		jV.setVisible(true);
+		jC.setForeground(Color.BLACK);
+		UserUi.getInstance().changePanel(jP);
 	}
 }

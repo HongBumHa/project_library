@@ -14,7 +14,7 @@ public class RentalViewDaoImpl implements RentalViewDao {
 
 	private SqlSession sqlSession;
 	private static final Log log = LogFactory.getLog(RentalViewDaoImpl.class);
-	private String namespace = "kr.or.dgit.library_project.dao.RentalViewDao";
+	private String namespace = "kr.or.dgit.project_library.dao.RentalViewDao";
 
 	private RentalViewDaoImpl() {}
 

@@ -12,7 +12,7 @@ import kr.or.dgit.project_library.dto.Book;
 public class BookDaoImpl implements BookDao {
 
 	private SqlSession sqlSession;
-	private String namespace="kr.or.dgit.library_project.dao.BookDao.";
+	private String namespace="kr.or.dgit.project_library.dao.BookDao.";
 	private static final Log log=LogFactory.getLog(BookDaoImpl.class);
 
 	public BookDaoImpl(SqlSession sqlSession) {

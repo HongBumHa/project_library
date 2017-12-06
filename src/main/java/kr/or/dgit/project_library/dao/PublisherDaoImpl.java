@@ -11,7 +11,7 @@ import kr.or.dgit.project_library.dto.Publisher;
 public class PublisherDaoImpl implements PublisherDao {
 	
 	private SqlSession sqlSession;
-	private String namespace="kr.or.dgit.library_project.dao.PublisherDao.";
+	private String namespace="kr.or.dgit.project_library.dao.PublisherDao.";
 	private static final Log log=LogFactory.getLog(PublisherDaoImpl.class);
 	
 	

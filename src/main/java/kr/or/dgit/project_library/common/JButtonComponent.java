@@ -18,7 +18,7 @@ public class JButtonComponent extends JPanel {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getActionCommand().equals("로그인")) {
-					UserUi frame = new UserUi();
+					UserUi frame = UserUi.getInstance();
 					frame.setVisible(true);
 				};
 				

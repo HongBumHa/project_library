@@ -14,7 +14,7 @@ public class HistoryViewDaoImpl implements HistoryViewDao {
 
 	private SqlSession sqlSession;
 	private static final Log log = LogFactory.getLog(HistoryViewDao.class);
-	private String namespace = "kr.or.dgit.library_project.dao.HistoryViewDao";
+	private String namespace = "kr.or.dgit.project_library.dao.HistoryViewDao";
 
 	public HistoryViewDaoImpl(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;

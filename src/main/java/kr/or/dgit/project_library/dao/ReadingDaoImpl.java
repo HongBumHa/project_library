@@ -10,7 +10,7 @@ import kr.or.dgit.project_library.dto.Reading;
 
 public class ReadingDaoImpl implements ReadingDao {
 	private SqlSession sqlSession;
-	private String namespace="kr.or.dgit.library_project.dao.ReadingDao.";
+	private String namespace="kr.or.dgit.project_library.dao.ReadingDao.";
 	private static final Log log=LogFactory.getLog(BookDaoImpl.class);
 	
 	public ReadingDaoImpl(SqlSession sqlSession) {

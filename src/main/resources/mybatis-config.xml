@@ -30,10 +30,9 @@
 		<mapper resource="kr/or/dgit/project_library/mappers/HistoryMapper.xml" />
 		<mapper resource="kr/or/dgit/project_library/mappers/RentalBookMapper.xml" />
 		<mapper resource="kr/or/dgit/project_library/mappers/UsersMapper.xml" />
-		<mapper resource="kr/or/dgit/library_project/mappers/BookGroupMapper.xml" />
-		<mapper resource="kr/or/dgit/library_project/mappers/BookMapper.xml" />
-		<mapper resource="kr/or/dgit/library_project/mappers/PostMapper.xml" />
-		<mapper resource="kr/or/dgit/library_project/mappers/ReadingMapper.xml" />
+		<mapper resource="kr/or/dgit/project_library/mappers/BookMapper.xml" />
+		<mapper resource="kr/or/dgit/project_library/mappers/PostMapper.xml" />
+		<mapper resource="kr/or/dgit/project_library/mappers/ReadingMapper.xml" />
 	</mappers>
 
 </configuration>

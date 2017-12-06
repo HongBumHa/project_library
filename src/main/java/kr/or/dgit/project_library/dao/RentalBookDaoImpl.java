@@ -13,7 +13,7 @@ public class RentalBookDaoImpl implements RentalBookDao {
 
 	private SqlSession sqlSession;
 	private static final Log log = LogFactory.getLog(RentalBookDao.class);
-	private String namespace = "kr.or.dgit.library_project.dao.RentalBookDao";
+	private String namespace = "kr.or.dgit.project_library.dao.RentalBookDao";
 
 	public RentalBookDaoImpl() {
 	}

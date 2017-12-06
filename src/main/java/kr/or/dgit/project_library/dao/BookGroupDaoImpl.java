@@ -12,7 +12,7 @@ public class BookGroupDaoImpl implements  BookGroupDao{
 	
 	private SqlSession sqlSession;
 	private static final Log log = LogFactory.getLog(BookGroupDao.class);
-	private String namespace = "kr.or.dgit.library_project.dao.BookGroupDao";
+	private String namespace = "kr.or.dgit.project_library.dao.BookGroupDao";
 	
 	public BookGroupDaoImpl(SqlSession sqlSession) {
 		super();

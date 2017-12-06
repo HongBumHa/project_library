@@ -4,14 +4,14 @@
       <Console name="Console" target="SYSTEM_OUT">
          <PatternLayout pattern="%5p [%t] - %m%n" />
       </Console>
-      <File name="file" fileName="./logs/library_project.log" append="false">
+      <File name="file" fileName="./logs/project_library.log" append="false">
          <PatternLayout pattern="%5p [%t] - %m%n" />
       </File>
    </Appenders>
    
 
    <Loggers>
-      <Logger name="kr.or.dgit.library_project" level="trace" additivity="false">
+      <Logger name="kr.or.dgit.project_library" level="trace" additivity="false">
          <!-- <AppenderRef ref="Console" /> -->
          <AppenderRef ref="file" /> 
       </Logger>
