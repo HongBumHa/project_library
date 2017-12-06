@@ -1,12 +1,13 @@
 package kr.or.dgit.project_library.common;
 
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-
 import java.awt.GridLayout;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import kr.or.dgit.project_library.ui.UserUi;
 
 public class JButtonComponent extends JPanel {
 
@@ -16,6 +17,11 @@ public class JButtonComponent extends JPanel {
 		JButton btnNewButton = new JButton(title);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(e.getActionCommand().equals("로그인")) {
+					UserUi frame = new UserUi();
+					frame.setVisible(true);
+				};
+				
 			}
 		});
 		add(btnNewButton);
